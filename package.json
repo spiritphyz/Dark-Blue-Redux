@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/spiritphyz/2016-09-mvp#readme",
   "dependencies": {
+    "angular": "^1.5.8",
     "bootstrap": "^4.0.0-alpha.4",
     "express": "^4.14.0",
     "font-awesome": "^4.6.3"
