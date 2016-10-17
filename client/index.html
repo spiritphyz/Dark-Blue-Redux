@@ -55,11 +55,11 @@
             <div class="card"> 
               <img class="card-img-top" src="img/level-aa-002.png" width="315" alt="Map 2">
               <div class="card-block">
-                <span class="card-text text-muted pull-xs-right">Total: 193</span>
+                <span class="card-text text-muted pull-xs-right">Total: {{getVotes(2)}}</span>
                 <h4 class="card-title">Map 2</h4>
                 <div class="text-block text-xs-center">
-                  <a href="" class="btn btn-warning"><i class="fa fa-arrow-down fa-1x"></i> Down Vote</a>
-                  <a href="" class="btn btn-info"><i class="fa fa-arrow-up fa-1x"></i> Up Vote</a>
+                  <a href="" ng-click="downvote(2)" class="btn btn-warning"><i class="fa fa-arrow-down fa-1x"></i> Down Vote</a>
+                  <a href="" ng-click="upvote(2)" class="btn btn-info"><i class="fa fa-arrow-up fa-1x"></i> Up Vote</a>
                 </div>
               </div>
             </div>
