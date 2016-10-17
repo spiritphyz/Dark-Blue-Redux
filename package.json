@@ -1,0 +1,31 @@
+{
+  "name": "dark-blue-redux",
+  "version": "0.0.1",
+  "description": "Play a game, vote for your favorite levels",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spiritphyz/2016-09-mvp.git"
+  },
+  "keywords": [
+    "game",
+    "eloquent",
+    "javascript",
+    "dark",
+    "blue"
+  ],
+  "author": "Tony Le",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/spiritphyz/2016-09-mvp/issues"
+  },
+  "homepage": "https://github.com/spiritphyz/2016-09-mvp#readme",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.4",
+    "express": "^4.14.0",
+    "font-awesome": "^4.6.3"
+  }
+}
