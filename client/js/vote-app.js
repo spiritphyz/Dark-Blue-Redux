@@ -51,6 +51,22 @@ angular.module('voteApp', [])
     };
     $scope.fetchData();
 
+    // post votes to server
+    $scope.postVotes = function() {
+      var data = [];
+      for (var key in $scope.maps) {
+        data.push($scope.maps[key]);
+      }
+      console.log('🍊 data to send to server is', data);
+      $http.post('saveMaps', data)
+        .then(function() {
+          console.log('🍊 successful post to server');
+        },
+        function(response) {
+          console.log('🍊 err from server post request', response);
+        });
+    };
+
     $scope.getMapTitle = function(mapNum) {
       return $scope.maps[mapNum].title;
     };

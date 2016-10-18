@@ -25,6 +25,12 @@ app.get('/getAllMaps', function(req, res) {
     });
 });
 
+// save map votes from client
+app.post('/saveMaps', function(req, res) {
+  console.log('🍊 here is data from client', req.body);
+  res.status(201).end();
+});
+
 // wildcard for other routes
 app.get('*', function(req, res) {
   res.status(404).end('Not Found');
