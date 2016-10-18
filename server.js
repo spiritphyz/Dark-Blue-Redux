@@ -16,13 +16,7 @@ app.get('/', function(req, res) {
 
 // serve list of maps from db
 app.get('/getAllMaps', function(req, res) {
-  db.getAllMaps()
-    .then(function(maps) {
-      res.status(200).end(JSON.stringify(maps));
-    })
-    .catch(function(err) {
-      console.log('🍊 can\'t do findAll() in app.get', err);
-    });
+  db.getAllMaps(req, res);
 });
 
 // save map votes from client

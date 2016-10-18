@@ -12,10 +12,13 @@ var Map = db.define('Map', {
   votes: Sequelize.INTEGER
 });
 
-exports.getAllMaps = function() {
-  return Map.sync() 
+exports.getAllMaps = function(req, res) {
+  Map.sync() 
     .then(function() {
       return Map.findAll();
+    })
+    .then(function(maps) {
+      res.status(200).end(JSON.stringify(maps));
     })
     .catch(function(err) {
       console.error('🍊 err in findAll query', err);
