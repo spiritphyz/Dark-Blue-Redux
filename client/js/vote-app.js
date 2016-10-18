@@ -67,6 +67,7 @@ angular.module('voteApp', [])
         });
     };
 
+    /* helpers for card display -------------------------------------- */
     $scope.getMapTitle = function(mapNum) {
       return $scope.maps[mapNum].title;
     };
@@ -91,4 +92,21 @@ angular.module('voteApp', [])
       }
       console.log(`🍊  downvote called, curr votes of map ${mapNum} is: ${$scope.maps[mapNum].votes}`);
     };
+    
+    /* timers for saving votes -------------------------------------- */
+    var scheduleNextVoteSave = function() {
+      $scope.postVotes();
+      generateRandomVoteSaveTimeoutID = setTimeout(
+        scheduleNextVoteSave, Math.random() * 5000
+        );
+    };
+    // scheduleNextVoteSave();
+
+    // Stop the auto-generated tweets after 1 minute
+    var cancelScheduleNextVoteSave = function() {
+      setTimeout(function() {
+        clearTimeout(generateRandomVoteSaveTimeoutID);
+      }, 60000);
+    };
+    // cancelScheduleNextVoteSave();
   });
