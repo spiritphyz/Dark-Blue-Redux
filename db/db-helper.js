@@ -1,4 +1,3 @@
-var Promise = require('bluebird');
 var Sequelize = require('sequelize');
 var db = new Sequelize('reduxdb', 'projects', 'MUCHbadpassword', {
   host: '127.0.0.1',
@@ -14,13 +13,9 @@ var Map = db.define('Map', {
 });
 
 exports.findAll = function() {
-  Map.sync() 
+  return Map.sync() 
     .then(function() {
       return Map.findAll();
-    })
-    .then(function(maps) {
-      // return JSON.stringify(maps);
-      next(maps);
     })
     .catch(function(err) {
       console.error('🍊 err in findAll query', err);
