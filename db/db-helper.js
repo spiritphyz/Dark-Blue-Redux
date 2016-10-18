@@ -21,3 +21,21 @@ exports.getAllMaps = function() {
       console.error('🍊 err in findAll query', err);
     });
 };
+
+exports.saveAllVotes = function(req, res) {
+  var data = req.body;
+  data.forEach(function(map) {
+    Map.update(
+      {votes: map.votes},
+      {where: {mapId: map.mapId}}
+    )
+    .then(function(result) {
+      console.log('🍊 successful update to db');
+      return result;
+    })
+    .catch(function(err) {
+      console.error('🍊 err in saveAllVotes query', err);
+    });
+  });
+  res.status(201).end();
+};
