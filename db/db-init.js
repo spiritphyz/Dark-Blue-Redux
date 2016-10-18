@@ -30,25 +30,31 @@ Map.sync().then(function() {
     votes: 0
   })
   .then(function() {
-    mapId: 2,
-    title: 'Pacific Heights',
-    description: 'what a nice mapB',
-    thumbnail: '',
-    votes: 0
+    Map.create({
+      mapId: 2,
+      title: 'Pacific Heights',
+      description: 'what a nice mapB',
+      thumbnail: '',
+      votes: 0
+    });
   })
   .then(function() {
-    mapId: 3,
-    title: 'Corona Heights',
-    description: 'what a nice mapC',
-    thumbnail: '',
-    votes: 0
+    Map.create({
+      mapId: 3,
+      title: 'Corona Heights',
+      description: 'what a nice mapC',
+      thumbnail: '',
+      votes: 0
+    });
   })
   .then(function() {
-    mapId: 4,
-    title: 'Washington Heights',
-    description: 'what a nice mapD',
-    thumbnail: '',
-    votes: 0
+    Map.create({
+      mapId: 4,
+      title: 'Washington Heights',
+      description: 'what a nice mapD',
+      thumbnail: '',
+      votes: 0
+    });
   })
   .then(function() {
     console.log('🍊 initialized 4 maps into db');

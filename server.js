@@ -1,5 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
+var Promise = require('bluebird');
 var db = require('./db/db-helper.js');
 
 // attach services
@@ -16,7 +17,6 @@ app.get('/', function(req, res) {
 
 // get all users
 app.get('/findAll', function(req, res) {
-  db.findAll(req, res); 
 });
 
 // wildcard for other routes
