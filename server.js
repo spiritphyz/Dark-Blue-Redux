@@ -1,5 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
+var db = require('./db/db-helper.js');
 
 // attach services
 var app = express();
@@ -11,6 +12,11 @@ app.use(bodyParser.json());
 // default route
 app.get('/', function(req, res) {
   res.sendFile('./index.html', {'root': '.'});
+});
+
+// get all users
+app.get('/findAll', function(req, res) {
+  db.findAll(req, res); 
 });
 
 // wildcard for other routes
