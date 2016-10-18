@@ -12,7 +12,7 @@ var Map = db.define('Map', {
   votes: Sequelize.INTEGER
 });
 
-exports.findAll = function() {
+exports.getAllMaps = function() {
   return Map.sync() 
     .then(function() {
       return Map.findAll();

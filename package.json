@@ -26,6 +26,7 @@
   "homepage": "https://github.com/spiritphyz/2016-09-mvp#readme",
   "dependencies": {
     "angular": "^1.5.8",
+    "bluebird": "^3.4.6",
     "body-parser": "^1.15.2",
     "bootstrap": "^4.0.0-alpha.4",
     "express": "^4.14.0",

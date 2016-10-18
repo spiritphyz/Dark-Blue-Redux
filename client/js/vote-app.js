@@ -1,30 +1,58 @@
 angular.module('voteApp', [])
-  .controller('voteCtrl', function($scope) {
+  .controller('voteCtrl', function($scope, $http) {
     $scope.maps = {
       '1': { 
         mapId: 1,
+        title: '',
         description: '',
         thumbnail: '',
         votes: 0
       },
       '2': { 
         mapId: 2,
+        title: '',
         description: '',
         thumbnail: '',
         votes: 0
       },
       '3': { 
         mapId: 3,
+        title: '',
         description: '',
         thumbnail: '',
         votes: 0
       },
       '4': { 
         mapId: 4,
+        title: '',
         description: '',
         thumbnail: '',
         votes: 0
       },
+    };
+
+    // load map data from server
+    $scope.fetchData = function() {
+      var serverData;
+      $http.get('getAllMaps')
+      .then(function(response) {
+        serverData = response.data;
+        console.log('🍊 successful server request', serverData);
+      },
+      function(response) {
+        console.log('🍊 err from server request', response);
+      })
+      .then(function() {
+        serverData.forEach(function(obj) {
+          $scope.maps[obj.mapId] = obj;
+        });
+        console.log('🍊 after transform, $scope.maps is', $scope.maps);
+      });
+    };
+    $scope.fetchData();
+
+    $scope.getMapTitle = function(mapNum) {
+      return $scope.maps[mapNum].title;
     };
 
     $scope.getVotes = function(mapNum) {

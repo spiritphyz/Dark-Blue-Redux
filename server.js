@@ -14,9 +14,9 @@ app.get('/', function(req, res) {
   res.sendFile('./index.html', {'root': '.'});
 });
 
-// get all users
-app.get('/findAll', function(req, res) {
-  db.findAll()
+// serve list of maps from db
+app.get('/getAllMaps', function(req, res) {
+  db.getAllMaps()
     .then(function(maps) {
       res.status(200).end(JSON.stringify(maps));
     })
