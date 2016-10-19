@@ -321,7 +321,7 @@ function runAnimation(frameFunc) {
   function frame(time) {
     var stop = false;
     if (lastTime != null) {
-      var timeStep = Math.min(time - lastTime, 100) / 700; // orig is 1000
+      var timeStep = Math.min(time - lastTime, 100) / 800; // orig is 1000
       stop = frameFunc(timeStep) === false;
     }
     lastTime = time;
