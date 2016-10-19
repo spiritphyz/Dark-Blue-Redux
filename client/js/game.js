@@ -334,7 +334,8 @@ function runAnimation(frameFunc) {
 var arrows = trackKeys(keyCodes);
 
 function runLevel(level, Display, andThen) {
-  var display = new Display(document.body, level);
+  // var display = new Display(document.body, level);
+  var display = new Display(document.getElementById('gameDisplay'), level);
   runAnimation(function(step) {
     level.animate(step, arrows);
     display.drawFrame(step);

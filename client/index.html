@@ -25,10 +25,16 @@
   <img class="m-x-auto d-block" src="img/dark-blue-redux-title.png">
     <div class="container-fluid">
       <div class="row">
-        <div class="viewport col-md-8 col-md-offset-2">
-            <script>
-              runGame(GAME_LEVELS, DOMDisplay);
-            </script>
+        <div class="col-xs-8">
+            <div id="gameDisplay">
+              <script>
+                runGame(GAME_LEVELS, DOMDisplay);
+              </script>
+            </div>
+        </div>
+        <div>
+        <!-- instructions -->
+        <img class="pull-xs-right" width="170" height="162" src="https://cloud.githubusercontent.com/assets/7908723/19448664/ac66dcbe-9457-11e6-942d-694b687f0aa0.gif">
         </div>
       </div>
     </div>
