@@ -2,3 +2,7 @@ body {
     background: rgb(75, 93, 107);
 }
 
+viewport {
+  width: 100%;
+  height: auto;
+}

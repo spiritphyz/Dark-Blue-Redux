@@ -34,8 +34,14 @@
     </div>
     <container class="container" ng-app="voteApp">
       <container ng-controller="voteCtrl">
-      <h2 class="bg-inverse d-inline h2"> Map Voting </h2>
-      <a ng-click="postVotes()" href="">send records to server</a>
+      <div class="row">
+        <div class="col-xs-4">
+          <h1 class="bg-inverse d-inline h1">&nbsp;&nbsp;MAP&nbsp; VOTING&nbsp;&nbsp;</h1>
+        </div>
+        <div class="col-xs-8">
+          <button type="button" class="btn btn-secondary"><a ng-click="postVotes()" href=""><i class="fa fa-cube"></i> Save</a></button>
+        </div>
+      </div>
         <div class="row">
           <!---- card 1 -------->
           <div class="col-md-4">
