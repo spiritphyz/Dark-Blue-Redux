@@ -45,8 +45,8 @@ The project is deployed on a [Linode](https://www.linode.com) Linux server ([Cen
 - [screengif](https://github.com/dergachev/screengif) and QuickTime Player for animated GIF graphic
 
 ### Back End ###
-- Node & Express
-- Sequelize ORM
+- [Node](https://nodejs.org/en/) & [Express](http://expressjs.com)
+- [Sequelize](http://docs.sequelizejs.com/en/v3/) ORM
 - [MariaDB](https://en.wikipedia.org/wiki/MariaDB) (a community version of MySQL)
 
 ### Credits ###
