@@ -32,7 +32,7 @@ Play the game now --> http://kookeemonsters.com:8080
 - Click 'Save Votes' to record the tallies
 
 ## Tech Stack ##
-As a demonstration of a full-stack web app, this project allows voting on your favorite maps. The votes are stored and persistently loaded from the server.
+As a demonstration of a full-stack web app, the site allows voting on your favorite maps. The votes are stored and persistently loaded from the server.
 
 The project is deployed on a [Linode](https://www.linode.com) Linux server ([CentOS 7](https://en.wikipedia.org/wiki/CentOS), a derivative of Red Hat Enterprise Linux. CentOS was chosen for stability over the cutting-edge yet brittle nature of the more common Ubuntu distribution).
 
@@ -50,8 +50,8 @@ The project is deployed on a [Linode](https://www.linode.com) Linux server ([Cen
 - [MariaDB](https://en.wikipedia.org/wiki/MariaDB) (a community version of MySQL)
 
 ### Credits ###
-The game is from Chapter 15 of [Eloquent JavaScript](http://eloquentjavascript.net/15_game.html), which is inspired by [Dark Blue](http://www.lessmilk.com/games/10), made by Thomas Palef.
+The game is from Chapter 15 of [Eloquent JavaScript](http://eloquentjavascript.net/15_game.html), which is inspired by [Dark Blue](http://www.lessmilk.com/games/10), created by Thomas Palef.
 
 I made slight tweaks to the game code, which is stored at [Dark Blue Redux Core](https://github.com/spiritphyz/Dark-Blue-Redux-Core).
 
-This is a solo student project for the MVP (Minimal Viable Product) sprint at [Hack Reactor](http://www.hackreactor.com/).
+Dark Blue Redux is a solo student project for the MVP (Minimal Viable Product) sprint at [Hack Reactor](http://www.hackreactor.com/).
