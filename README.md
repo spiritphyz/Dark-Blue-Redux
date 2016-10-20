@@ -34,7 +34,7 @@ Play the game now --> http://kookeemonsters.com:8080
 ## Tech Stack ##
 As a demonstration of a full-stack web app, the site allows voting on your favorite maps. The votes are stored and persistently loaded from the server.
 
-The project is deployed on a [Linode](https://www.linode.com) Linux server ([CentOS 7](https://en.wikipedia.org/wiki/CentOS), a derivative of Red Hat Enterprise Linux. CentOS was chosen for stability over the cutting-edge yet brittle nature of the more common Ubuntu distribution).
+The site is deployed on a [Linode](https://www.linode.com) Linux server ([CentOS 7](https://en.wikipedia.org/wiki/CentOS), a derivative of Red Hat Enterprise Linux. CentOS was chosen for stability over the cutting-edge yet brittle nature of the more common Ubuntu distribution).
 
 ### Front End ###
 - Angular 1 for interactive elements
