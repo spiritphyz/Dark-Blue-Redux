@@ -18,7 +18,8 @@ exports.getAllMaps = function(req, res) {
       return Map.findAll();
     })
     .then(function(maps) {
-      res.status(200).end(JSON.stringify(maps));
+      res.status(200).send(JSON.stringify(maps));
+      res.status(200).send(maps);
     })
     .catch(function(err) {
       console.error('🍊 err in findAll query', err);

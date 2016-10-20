@@ -26,7 +26,7 @@ app.post('/saveMaps', function(req, res) {
 
 // wildcard for other routes
 app.get('*', function(req, res) {
-  res.status(404).end('Not Found');
+  res.status(404).send('Not Found');
 });
 
 // start the server
