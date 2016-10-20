@@ -25,7 +25,7 @@ Your challenge: collect all the yellow pellets without fail!
 --> move left
  x  jump
 ```
-Play the game now --> http://www.kookeemonsters.com:8080
+Play the game now --> http://kookeemonsters.com:8080
 
 ## How to Vote ##
 - Click 'Up Vote' or 'Down Vote'
@@ -53,3 +53,5 @@ The project is deployed on a [Linode](https://www.linode.com) Linux server ([Cen
 The game is from Chapter 15 of [Eloquent JavaScript](http://eloquentjavascript.net/15_game.html), which is inspired by [Dark Blue](http://www.lessmilk.com/games/10), made by Thomas Palef.
 
 I made slight tweaks to the game code, which is stored at [Dark Blue Redux Core](https://github.com/spiritphyz/Dark-Blue-Redux-Core).
+
+This is a solo student project for the MVP (Minimal Viable Product) sprint at [Hack Reactor](http://www.hackreactor.com/).
