@@ -13,10 +13,7 @@ var Map = db.define('Map', {
 });
 
 exports.getAllMaps = function(req, res) {
-  Map.sync() 
-    .then(function() {
-      return Map.findAll();
-    })
+  return Map.findAll()
     .then(function(maps) {
       res.status(200).send(maps);
     })
