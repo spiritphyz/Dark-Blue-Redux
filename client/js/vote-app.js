@@ -1,5 +1,8 @@
 angular.module('voteApp', [])
   .controller('voteCtrl', function($scope, $http) {
+    // spinner state to display / hide during GET request
+    $scope.loading = false;
+
     $scope.maps = {
       '1': { 
         mapId: 1,
@@ -53,18 +56,21 @@ angular.module('voteApp', [])
 
     // post votes to server
     $scope.postVotes = function() {
+      $scope.loading = true;
       var data = [];
+
       for (var key in $scope.maps) {
         data.push($scope.maps[key]);
       }
       console.log('🍊 data to send to server is', data);
       $http.post('saveMaps', data)
         .then(function(response) {
-          // console.log('🍊 successful post to server');
           console.log('🍊 response from server', response.data);
+          $scope.loading = false;
         },
         function(response) {
           console.log('🍊 err from server post request', response);
+          $scope.loading = false;
         });
     };
 
@@ -93,3 +99,4 @@ angular.module('voteApp', [])
       }
       console.log(`🍊  downvote called, curr votes of map ${mapNum} is: ${$scope.maps[mapNum].votes}`);
     };
+  });
