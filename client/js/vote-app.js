@@ -59,8 +59,9 @@ angular.module('voteApp', [])
       }
       console.log('🍊 data to send to server is', data);
       $http.post('saveMaps', data)
-        .then(function() {
-          console.log('🍊 successful post to server');
+        .then(function(response) {
+          // console.log('🍊 successful post to server');
+          console.log('🍊 response from server', response.data);
         },
         function(response) {
           console.log('🍊 err from server post request', response);

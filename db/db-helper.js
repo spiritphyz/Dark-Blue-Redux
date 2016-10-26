@@ -37,5 +37,5 @@ exports.saveAllVotes = function(req, res) {
       console.error('🍊 err in saveAllVotes query', err);
     });
   });
-  res.status(201).end();
+  res.status(201).end('yes');
 };
