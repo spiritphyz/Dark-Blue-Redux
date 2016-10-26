@@ -93,22 +93,3 @@ angular.module('voteApp', [])
       }
       console.log(`🍊  downvote called, curr votes of map ${mapNum} is: ${$scope.maps[mapNum].votes}`);
     };
-
-    /* timers for saving votes -------------------------------------- */
-    // these timers seem to break Angular, so I'm disabling them
-    var scheduleNextVoteSave = function() {
-      $scope.postVotes();
-      generateRandomVoteSaveTimeoutID = setTimeout(
-        scheduleNextVoteSave, Math.random() * 5000
-        );
-    };
-    // scheduleNextVoteSave();
-
-    // Stop the auto-generated tweets after 1 minute
-    var cancelScheduleNextVoteSave = function() {
-      setTimeout(function() {
-        clearTimeout(generateRandomVoteSaveTimeoutID);
-      }, 60000);
-    };
-    // cancelScheduleNextVoteSave();
-  });
