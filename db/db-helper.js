@@ -1,7 +1,7 @@
 var Sequelize = require('sequelize');
 var db = new Sequelize('reduxdb', 'projects', 'MUCHbadpassword', {
   host: '127.0.0.1',
-  dialect: 'mysql'
+  dialect: 'mariadb'
 });
 
 var Map = db.define('Map', {
