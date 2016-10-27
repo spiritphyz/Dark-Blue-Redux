@@ -9,7 +9,14 @@ var Map = db.define('Map', {
   title: Sequelize.STRING,
   description: Sequelize.STRING,
   thumbnail: Sequelize.STRING,
-  votes: Sequelize.INTEGER
+  votes: {
+    type: Sequelize.INTEGER,
+    validate: {
+      isInt: true,
+      min: 0,
+      max: 4096
+    }
+  }
 });
 
 exports.getAllMaps = function(req, res) {
@@ -24,6 +31,7 @@ exports.getAllMaps = function(req, res) {
 
 exports.saveAllVotes = function(req, res) {
   var data = req.body;
+  console.log('🍊  typeof data', data);
   data.forEach(function(map) {
     Map.update(
       {votes: map.votes},
@@ -37,7 +45,6 @@ exports.saveAllVotes = function(req, res) {
       console.error('🍊 err in saveAllVotes query', err);
     });
   });
-  // res.status(201).end('done-saving');
   // intentionally delay response to display spinner longer
   // and discourage fast clicking of the save button
   setTimeout(function() {
