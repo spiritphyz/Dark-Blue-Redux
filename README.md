@@ -41,6 +41,7 @@ The site is deployed on a [Linode](https://www.linode.com) Linux server ([CentOS
 - Bootstrap 4 for a CSS framework
 - [FontAwesome](http://fontawesome.io) icons (glyphicons from Bootstrap 3 are no longer supported)
 - [Arcade](http://www.urbanfonts.com/fonts/Arcade.htm) and [superscript](http://www.urbanfonts.com/fonts/superscript.htm) pixel fonts
+- Pure [CSS spinner](http://stephanwagner.me/only-css-loading-spinner) by Stephan Wagner
 - Adobe Photoshop for graphic illustrations and favicon
 - [screengif](https://github.com/dergachev/screengif) and QuickTime Player for animated GIF graphic
 
