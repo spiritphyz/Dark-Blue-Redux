@@ -11,8 +11,9 @@ body {
 }
  
 .spinner {
-    min-width: 24px;
-    min-height: 24px;
+    min-width: 34px;
+    min-height: 34px;
+    position: relative;
 }
  
 .spinner:before {
@@ -22,17 +23,15 @@ body {
     left: 50%;
     width: 16px;
     height: 16px;
-    margin-top: -10px;
-    margin-left: -10px;
+    margin-top: -7px;
+    margin-left: 9px;
 }
  
 .spinner:not(:required):before {
     content: '';
     border-radius: 50%;
-    border: 1px solid #f6f;
-    border-top-color: #0e0;
-    border-right-color: #0dd;
-    border-bottom-color: #f90;
+    border-top: 3px solid #fd6064;
+    border-right: 2px solid transparent;
     animation: spinner .6s linear infinite;
     -webkit-animation: spinner .6s linear infinite;
 }

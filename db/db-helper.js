@@ -38,7 +38,8 @@ exports.saveAllVotes = function(req, res) {
     });
   });
   // res.status(201).end('done-saving');
-  // intentionally delay response for to test spinner display
+  // intentionally delay response to display spinner longer
+  // and discourage fast clicking of the save button
   setTimeout(function() {
     res.status(201).end('here is delayed response after 2 sec');
   }, 2000);
