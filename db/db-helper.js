@@ -31,7 +31,6 @@ exports.getAllMaps = function(req, res) {
 
 exports.saveAllVotes = function(req, res) {
   var data = req.body;
-  console.log('🍊  typeof data', data);
   data.forEach(function(map) {
     Map.update(
       {votes: map.votes},
