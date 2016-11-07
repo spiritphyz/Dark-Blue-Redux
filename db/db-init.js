@@ -24,7 +24,7 @@ var Map = db.define('Map', {
 Map.sync().then(function() {
   Map.create({
     mapId: 1,
-    title: 'Golan Heights',
+    title: 'Forest of Illusion',
     description: 'what a nice mapA',
     thumbnail: '',
     votes: 0
@@ -32,7 +32,7 @@ Map.sync().then(function() {
   .then(function() {
     Map.create({
       mapId: 2,
-      title: 'Pacific Heights',
+      title: 'Pipe Land',
       description: 'what a nice mapB',
       thumbnail: '',
       votes: 0
@@ -41,7 +41,7 @@ Map.sync().then(function() {
   .then(function() {
     Map.create({
       mapId: 3,
-      title: 'Corona Heights',
+      title: 'Vanilla Dome',
       description: 'what a nice mapC',
       thumbnail: '',
       votes: 0
@@ -50,7 +50,7 @@ Map.sync().then(function() {
   .then(function() {
     Map.create({
       mapId: 4,
-      title: 'Washington Heights',
+      title: 'Chocolate Island',
       description: 'what a nice mapD',
       thumbnail: '',
       votes: 0
