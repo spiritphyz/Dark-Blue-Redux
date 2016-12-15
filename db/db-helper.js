@@ -1,4 +1,4 @@
-require('../env.js');
+require('../env.js'); // access sensitive info in process.env
 const Sequelize = require('sequelize');
 const database = process.env.DB_DB;
 const user = process.env.DB_USER;
@@ -26,32 +26,32 @@ const Map = db.define('Map', {
 
 exports.getAllMaps = function(req, res) {
   return Map.findAll()
-    .then(function(maps) {
+    .then(maps => {
       res.status(200).send(maps);
     })
-    .catch(function(err) {
+    .catch(err => {
       console.error('🍊 err in findAll query', err);
     });
 };
 
 exports.saveAllVotes = function(req, res) {
   const data = req.body;
-  data.forEach(function(map) {
+  for (const map of data) {
     Map.update(
       {votes: map.votes},
       {where: {mapId: map.mapId}}
     )
-    .then(function(result) {
+    .then(result => {
       console.log('🍊 successful update to db');
       return result;
     })
-    .catch(function(err) {
+    .catch(err => {
       console.error('🍊 err in saveAllVotes query', err);
     });
-  });
+  }
   // intentionally delay response to display spinner longer
   // and discourage fast clicking of the save button
-  setTimeout(function() {
+  setTimeout(() => {
     res.status(201).end('here is delayed response after 2 sec');
   }, 2000);
 };
