@@ -31,4 +31,4 @@ app.get('*', function(req, res) {
 
 // start the server
 app.listen(8080);
-console.log('🍊  Listening on port 8080');
+console.log('🍊  Listening on port 8080 for Dark Blue Redux');
