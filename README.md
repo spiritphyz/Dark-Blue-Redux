@@ -18,6 +18,8 @@ Play the game now --> http://spiritphyz.io:8080
 ## Tech Stack ##
 As a demonstration of a full-stack web app, the site allows voting on your favorite maps. The votes are stored and persistently loaded from the server.
 
+<img src="./press-materials/system-architecture.png">
+
 The site is deployed on [Digital Ocean](https://www.digitalocean.com) with Ubuntu 16.04. Originally, it was deployed on [Linode](https://www.digitalocean.com) with [CentOS 7](https://en.wikipedia.org/wiki/CentOS), a derivative of Red Hat Enterprise Linux.
 
 ### Front End ###
@@ -39,4 +41,4 @@ The game is from Chapter 15 of [Eloquent JavaScript](http://eloquentjavascript.n
 
 I made slight tweaks to the game code, which is stored at [Dark Blue Redux Core](https://github.com/spiritphyz/Dark-Blue-Redux-Core).
 
-Dark Blue Redux is a solo student project for the MVP (Minimal Viable Product) sprint at [Hack Reactor](http://www.hackreactor.com/).
+Dark Blue Redux is a demonstration of a MVP (Minimal Viable Product) whose main components were created over a period of 2 days.
