@@ -28,8 +28,5 @@ dist/
 node_modules/
 bower_components/
 
-# Floobits
-.floo
-.floobit
-.floo
-.flooignore
+# environment file for storing sensitive info not to be uploaded to GitHub
+.env
