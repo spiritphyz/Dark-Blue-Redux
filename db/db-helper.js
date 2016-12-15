@@ -1,10 +1,15 @@
-var Sequelize = require('sequelize');
-var db = new Sequelize('reduxdb', 'projects', 'MUCHbadpassword', {
+require('../env.js');
+const Sequelize = require('sequelize');
+const database = process.env.DB_DB;
+const user = process.env.DB_USER;
+const pw = process.env.DB_PASSWORD;
+
+const db = new Sequelize(database, user, pw, {
   host: '127.0.0.1',
   dialect: 'mariadb'
 });
 
-var Map = db.define('Map', {
+const Map = db.define('Map', {
   mapId: Sequelize.INTEGER,
   title: Sequelize.STRING,
   description: Sequelize.STRING,
@@ -30,7 +35,7 @@ exports.getAllMaps = function(req, res) {
 };
 
 exports.saveAllVotes = function(req, res) {
-  var data = req.body;
+  const data = req.body;
   data.forEach(function(map) {
     Map.update(
       {votes: map.votes},
